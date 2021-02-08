@@ -44,24 +44,14 @@
     <!-- Section description -->
     <h3 class="lead text-center text-white pt-2 mb-5">Welcome!</h3>
 <form class="mb-5 mx-md-5" action="login" method="POST">
-
     <div class="col-md-4 mb-4" style="margin: auto;">
-
         <!-- Name -->
-        <input class="form-control" type="email"/>
-
+        <input class="form-control" type="email" name="email"/>
     </div>
 
     <div class="col-md-4 mb-4" style="margin: auto;">
-
         <!-- Subject -->
-        <input type="password" class="form-control"/>
-
-    </div>
-    <div class="text-center text-white">
-        <p>Not a member?
-            <a>Register</a>
-        </p>
+        <input type="password" class="form-control" name="password"/>
     </div>
 
     <div class="text-center">

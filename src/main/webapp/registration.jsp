@@ -48,19 +48,19 @@
         <div class="col-md-4 mb-4" style="margin: auto;">
 
             <!-- Name -->
-            <input type="name" class="form-control" placeholder="Name"/>
+            <input type="text" class="form-control" placeholder="Name" name="name"/>
 
         </div>
         <div class="col-md-4 mb-4" style="margin: auto;">
 
             <!-- Email -->
-            <input type="email" class="form-control" placeholder="Email"/>
+            <input type="email" class="form-control" placeholder="Email" name="email"/>
         </div>
 
         <div class="col-md-4 mb-4" style="margin: auto;">
 
             <!-- Subject -->
-            <input type="password" class="form-control" placeholder="Password"/>
+            <input type="password" class="form-control" placeholder="Password" name="password"/>
         </div>
 
         <div class="col-md-4 mb-4" style="margin: auto;">

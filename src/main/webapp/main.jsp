@@ -25,12 +25,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 </head>
 <body>
-<%--<h2>Main page</h2>--%>
-<%--<a href="logIn.jsp">Log in</a>--%>
-<%--<a href="registration.jsp">Register</a>--%>
 
 <!-- Section -->
-<section>
+<section class="mt-5">
 
     <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Welcome to</h6>
     <h3 class="font-weight-bold text-center dark-grey-text pb-2">Main Page</h3>
@@ -39,10 +36,11 @@
 
 
     <!-- Grid row -->
-    <div class="gallery mb-5 row" id="gallery">
+    <div class="gallery mb-5 row" id="gallery" style="display: flex; align-items: center; justify-content: center;">
 
         <!-- Grid column -->
-        <div class="col-md-4 pics all 2 animation view overlay zoom" style="background-color: cornflowerblue; height: 200px">
+        <div class="col-md-4 pics all 2 animation view overlay zoom" style="background-color: cornflowerblue;
+        height: 200px; margin-right: 40px;">
                     <a href="logIn.jsp">
                         <div class="mask flex-center rgba-black-light">
                             <p class="white-text">Log In</p>

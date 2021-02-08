@@ -22,13 +22,14 @@ public class LoginServlet extends HttpServlet {
         String login = request.getParameter("email");
         String password = request.getParameter("password");
 
-        if (login.equals("admin@mail.ru") && password.equals("admin")){
-            out.println("Welcome, " + login);
-            out.println("Your password: " + password);
-//            RequestDispatcher requestDispatcher = request.getRequestDispatcher("main.jsp");
+        if (login.equals("assem@mail.ru") && password.equals("admin")){
+            out.println("<h1>Welcome, " + login + "</h1><br>");
+            out.println("<h2>Your password: " + password + "</h2><br>");
+            out.println("Go to <a href='main.jsp'>Main page</a>");
         }else{
-            out.println("Incorrect! Try again...");
-            request.getRequestDispatcher("/main.jsp").forward(request, response);
+            out.println("<h2>Incorrect! Try again or register.</h1><br>");
+            out.println("Go to <a href='main.jsp'>Main page</a>");
+//            request.getRequestDispatcher("/main.jsp").forward(request, response);
         }
         out.close();
     }

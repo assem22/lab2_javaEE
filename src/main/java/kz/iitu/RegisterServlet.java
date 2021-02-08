@@ -16,24 +16,24 @@ public class RegisterServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
+        String name = request.getParameter("name");
         String login = request.getParameter("email");
         String password = request.getParameter("password");
         String repeatPassword = request.getParameter("repeatPassword");
 
-        out.println("Successfully registered");
-        out.println("Welcome, " + login);
-        out.println("Your password: " + password);
-
         if (password.equals(repeatPassword)){
-            out.println("Successfully registered");
-            out.println("Welcome, " + login);
-            out.println("Your password: " + password);
+            out.println("<h1>Successfully registered</h1><br>");
+            out.println("<h2>Welcome, " + name + "</h2><br>");
+            out.println("<h2>Your login: " + login + "</h2><br>");
+            out.println("<h2>Your password: " + password + "</h2><br>");
+            out.println("Go to <a href='main.jsp'>Main page</a>");
 //            RequestDispatcher requestDispatcher = request.getRequestDispatcher("main.jsp");
         }else{
-            out.println("Passwords doesn't match! Try again...");
+            out.println("<h2>Passwords doesn't match! Try again...</h1><br>");
+            out.println("Go to <a href='main.jsp'>Main page</a>");
         }
         out.close();
 
-        request.getRequestDispatcher("/main.jsp").forward(request, response);
+//        request.getRequestDispatcher("/main.jsp").forward(request, response);
     }
 }

@@ -1,4 +1,4 @@
-package kz.iitu;
+package kz.iitu.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

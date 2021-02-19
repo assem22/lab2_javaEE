@@ -4,4 +4,35 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+
+    <filter>
+        <filter-name>LoggingRequestFilter</filter-name>
+        <filter-class>kz.iitu.filter.LoggingRequestFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoggingRequestFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>RequestFilter</filter-name>
+        <filter-class>kz.iitu.filter.RequestFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>RequestFilter</filter-name>
+        <url-pattern>/welcomeBack.jsp</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>ResponseFilter</filter-name>
+        <filter-class>kz.iitu.filter.ResponseFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ResponseFilter</filter-name>
+        <url-pattern>/servlet2</url-pattern>
+    </filter-mapping>
 </web-app>

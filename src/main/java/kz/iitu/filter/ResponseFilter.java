@@ -24,8 +24,9 @@ public class ResponseFilter implements Filter {
 
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-                session.setMaxInactiveInterval(30*60);
-                cookie.setMaxAge(30*60);
+                session.getAttribute("email");
+                session.setMaxInactiveInterval(30);
+                cookie.setMaxAge(30);
                 response.addCookie(cookie);
             }
         }

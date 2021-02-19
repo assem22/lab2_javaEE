@@ -16,20 +16,20 @@ public class LogoutServlet extends HttpServlet {
     	response.setContentType("text/html");
     	Cookie[] cookies = request.getCookies();
     	if(cookies != null){
-    	for(Cookie cookie : cookies){
-    		if(cookie.getName().equals("JSESSIONID")){
-    			System.out.println("JSESSIONID="+cookie.getValue());
-    			break;
-    		}
-    	}
+			for(Cookie cookie : cookies){
+				if(cookie.getName().equals("email")){
+					System.out.println("JSESSIONID="+cookie.getValue());
+					cookie.setMaxAge(0);
+					response.addCookie(cookie);
+					break;
+				}
+			}
     	}
     	//invalidate the session if exists
     	HttpSession session = request.getSession(false);
     	System.out.println("User="+session.getAttribute("email"));
-    	if(session != null){
-    		session.invalidate();
-    	}
-    	response.sendRedirect("logIn.jsp");
+		session.invalidate();
+		response.sendRedirect("logIn.jsp");
     }
 
 }

@@ -1,15 +1,10 @@
 package kz.iitu.filter;
 
-import kz.iitu.fakeDB.FakeDB;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicReference;
-
-import static java.util.Objects.nonNull;
 
 public class RequestFilter implements Filter {
     private ServletContext context;
